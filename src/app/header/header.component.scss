@@ -1,0 +1,51 @@
+@import '../assets/lib/constants';
+@import '../assets/lib/utilities';
+
+header {
+  @include expandBackground(#01adf0);
+  color: white;
+  min-height: $header-height;
+  height: auto;
+  padding-top: 1rem;
+  .row {
+    display: flex;
+    padding-bottom: 1rem;
+    div:nth-child(1) {
+      @include bottomChildren();
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      a:last-child span {
+        font-size: 0.8rem;
+      }
+    }
+    div:nth-child(2) {
+      position: relative;
+      h1 {
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 0;
+      }
+      p {
+        font-size: 1.2rem;
+        position: relative;
+        left: 50%;
+        font-weight: 300;
+      }
+    }
+    div:nth-child(3) {
+      @include bottomChildren();
+      p {
+        font-weight: 500;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+  header .row {
+    display: block;
+  }
+}

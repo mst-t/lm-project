@@ -1,0 +1,38 @@
+@import '../assets/lib/constants';
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+li {
+  padding: 10px 15px 10px 0;
+  a {
+    color: #5f5d5f;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.nav-item {
+  a:hover {
+    background-color: rgba(151, 203, 229, 0.5);
+  }
+  .active-link {
+    color: $main-color;
+  }
+}
+
+.client-login {
+  margin-right: -100%;
+  padding-right: 100%;
+  background-color: #67cdf5;
+  padding-left: 40px;
+  margin-left: auto;
+  text-align: right;
+  a {
+    color: white;
+  }
+}

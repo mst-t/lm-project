@@ -1,0 +1,14 @@
+@import '../assets/lib/constants';
+
+h1 {
+  font-size: 9rem;
+  text-align: center;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+@media screen and (max-width: $screen-sm) {
+  h1 {
+    font-size: 4rem;
+  }
+}

@@ -4,10 +4,10 @@ import { TransferState } from '../../modules/transfer-state/transfer-state';
 
 @Component({
   selector: 'home-view',
-  templateUrl: './home-view.html',
-  styleUrls: ["./style.scss"]
+  templateUrl: './home-view.component.html',
+  styleUrls: ["./home-view.component.scss"]
 })
-export class HomeView implements OnInit {
+export class HomeViewComponent implements OnInit {
   public message: string;
 
   constructor(private transferState: TransferState) {}

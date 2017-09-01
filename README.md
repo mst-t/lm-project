@@ -1,11 +1,37 @@
-# A seed project of Angular Universal app
+# A sample Angular Universal app
+A sample website using Angular Universal. Only `Home` and `Closed Tdansaction` sections work so far.
 
-A minimal Angular starter for Universal JavaScript using TypeScript and Webpack. This project is based on [angular/universal-starter](https://github.com/angular/universal-starter).
+## Done
+Languages
+* TypeScript
+* SASS(SCSS)
 
-## Changes
-* Sourcemaps are generated.
-* Js files are minified.
-* Saas and Boostrap are available.
+Angular
+* Version 4.0
+* Routing
+* Form Validations
+* Siver Side Rendering(using Angular Universal and Node)
+
+Bootstrap
+* Grid layout
+* Responsive Design
+* Fontawesome
+
+Optimizations
+* Server Side Rendering
+* Lazy Loading using Angular Routing(`+lazy` and `+transaction` modules)
+* Minifying codes using a Webpack plugin
+* SASS `import` and embed css code into the main html file.
+
+## TODO
+* Complete the design of the `transaction` view.
+* Implement `sort` function using Angular features.
+* Implement modal for each property info.
+* Ensure browser compatibilities(will try a webpack plugin and test them)
+
+## Extra TODO for performance optimizations
+* Cache property data.
+* Create image sprites.
 
 > If you're looking for the Angular Universal repo go to [**angular/universal**](https://github.com/angular/universal)  
 
@@ -18,25 +44,5 @@ A minimal Angular starter for Universal JavaScript using TypeScript and Webpack.
 * `npm start` to build your client app and start a web server
 * `npm run build` to prepare a distributable bundle
 
-## Development
-* run `npm start` and `npm run watch` in two separate terminals to build your client app, start a web server, and allow file changes to update in realtime
-
-## Prod
-* `npm run build:prod` to compile the ngfactory files and build prod
-* `npm run server` to start up the server
-
-## Notes
-
-> When building Universal components in Angular there are a few things to keep in mind.
-
- - **`window`**, **`document`**, **`navigator`**, and other browser types - _do not exist on the server_ - so using them, or any library that uses them (jQuery for example) will not work. You do have some options, if you truly need some of this functionality:
-    - If you need to use them, consider limiting them to only your main.client and wrapping them situationally with the imported *isBrowser / isNode* features from Universal.  `import { isBrowser, isNode } from 'angular2-universal'`;
-    - Another option is using `DOM` from ["@angular/platform-browser"](https://github.com/angular/angular/blob/e3687706c71beb7c9dbdae1bbb5fbbcea588c476/modules/%40angular/platform-browser/src/dom/dom_adapter.ts#L34)
- - **Don't manipulate the nativeElement directly**. Use the _Renderer_. We do this to ensure that in any environment we're able to change our view.
-```
-constructor(element: ElementRef, renderer: Renderer) {
-  renderer.setElementStyle(element.nativeElement, 'font-size', 'x-large');
-}
-```
 # License
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/LICENSE)

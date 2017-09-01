@@ -1,0 +1,27 @@
+@import '../assets/lib/constants';
+
+h2 {
+  padding-bottom: 1rem;
+  border-bottom: 0.1rem solid grey;
+}
+
+.row {
+  margin-bottom: 1rem;
+}
+
+hr {
+  width: 75%;
+}
+
+.clearfix {
+  display: none;
+}
+
+@media screen and (max-width: $screen-md) {
+  .clearfix {
+    content: "";
+    visibility: none;
+    clear: both;
+    display: block;
+  }
+}

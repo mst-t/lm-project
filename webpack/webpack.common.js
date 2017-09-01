@@ -6,7 +6,6 @@ const webpack = require('webpack');
  * This is a common webpack config which is the base for all builds
  */
 module.exports = {
-  devtool: 'source-map',
   resolve: {
     extensions: ['.ts', '.js']
   },
@@ -24,7 +23,14 @@ module.exports = {
         exclude: /node_modules/,
         loaders: ['raw-loader', 'sass-loader']
       },
-      { test: /\.(woff2?|ttf|eot|svg)$/, loader: 'file-loader' }
+      { test: /\.(jpe?g|png)$/,
+        loader: 'file-loader',
+        options: { name: './images/[name].[ext]' }
+      },
+      { test: /\.(woff2?|ttf|eot|svg)$/,
+        loader: 'file-loader',
+        options: { name: './fonts/[name].[ext]' }
+      }
     ]
   },
   plugins: [

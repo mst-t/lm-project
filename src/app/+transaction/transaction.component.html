@@ -1,0 +1,40 @@
+<div class="row">
+  <h2 class="col-xs-12">My Closed Tdansactions</h2>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Filter Options:
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li class="dropdown-item" href="#">Sort By Highest Price</li>
+        <li class="dropdown-item" href="#">Sort By Lowest Price</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="row" *ngFor="let property of properties">
+  <div class="col-md-2 col-xs-6">
+    <img src="{{property.image}}" class="img-responsive">
+  </div>
+  <div class="col-md-3 col-xs-6">
+    <p>{{property.address}}</p>
+    <p>{{property.aria}}</p>
+    <p>{{property.signed}}</p>
+  </div>
+  <span class="clearfix"></span>
+  <div class="col-md-1 col-xs-4">
+    <p>{{property.rooms}} beds<p>
+    <p>{{property.baths}} bath</p>
+  </div>
+  <div class="col-md-3 col-xs-4">
+    <p>{{property.priceForSale | currency:'USD':true}} <p>
+    <p>{{property.priceForRent | currency:'USD':true}} /SF</p>
+  </div>
+  <div class="col-md-3 col-xs-4">
+    <p>{{property.aria}}<p>
+  </div>
+  <hr>
+</div>

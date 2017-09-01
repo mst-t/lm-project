@@ -3,7 +3,7 @@ import { TransferState } from '../modules/transfer-state/transfer-state';
 import { REQUEST } from '@nguniversal/express-engine/tokens';
 
 @Component({
-  selector: 'root-app',
+  selector: 'ret-root',
   templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {

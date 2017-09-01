@@ -1,0 +1,53 @@
+<div class="form-header">
+  <div class="row">
+    <div class="col-sm-4 col-xs-12 text-left">
+      <span>Join Us Today!</span>
+    </div>
+    <div class="col-sm-4 col-xs-6 text-center">
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+    </div>
+    <div class="col-sm-4 col-xs-6 text-right">
+      <button class="btn btn-primary">REGISTER</button>
+    </div>
+  </div>
+</div>
+<div class="form-content">
+  <div class="row">
+    <form class="col-xs-12 form-input" id="userForm" name="userForm" (ngSubmit)="onSubmit(userForm.value)" #userForm="ngForm">
+      <div>
+        <input type="text" placeholder="NAME" id="name" required
+               ngModel name="name" #name="ngModel">
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          Please enter Name!
+        </div>
+        <input type="email" placeholder="E-MAIL" id="email" required
+               ngModel name="email" email #email="ngModel">
+        <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+          Please enter valid E-MAIL!
+        </div>
+        <input type="tel" placeholder="PHONE" id="phone" required
+               ngModel name="phone" #phone="ngModel">
+        <div [hidden]="phone.valid || phone.pristine" class="alert alert-danger">
+          Please enter valid Phone Number!
+        </div>
+      </div>
+      <div>
+        <textarea placeholder="MESSAGE" id="message"
+                  ngModel name="message" #message="ngModel">
+        </textarea>
+      </div>
+    </form>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 form-output">
+      <div>
+        <a href="tel:1-800-222-5555"><i aria-hidden="true" class="fa fa-phone"></i> <span><b>1-800-222-5555</b></span></a>
+      </div>
+      <div>
+        <a href="mailto:info@jasminmcdonough.com"><i aria-hidden="true" class="fa fa-envelope-o"></i> <span class="text-left">info@jasminmcdonough.com</span></a>
+        <button type="submit" class="btn btn-primary text-right" form="userForm"
+                [disabled]="!userForm.valid">SEND</button>
+      </div>
+    </div>
+  </div>
+</div>

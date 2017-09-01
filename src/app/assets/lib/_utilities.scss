@@ -1,0 +1,17 @@
+@mixin expandBackground ($bgColor) {
+  background-color: $bgColor;
+  margin: 0 -100%;
+  padding: 0 100%;
+}
+
+@mixin centerChildren {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@mixin bottomChildren {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
