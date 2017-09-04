@@ -1,16 +1,60 @@
 @import '../assets/lib/constants';
 
 h2 {
-  padding-bottom: 1rem;
-  border-bottom: 0.1rem solid grey;
+  width: 100%;
+  border-bottom: 0.1rem solid #9b9999;
+  padding-bottom: 2rem;
+}
+
+select {
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  margin-left: 16.2%; /* offset-md-2 could be OK... */
+  padding-right: 1rem;
 }
 
 .row {
   margin-bottom: 1rem;
+  div p:first-child {
+    padding-top: 1.5rem;
+    margin-bottom: 0.2rem;
+  }
+  div p:nth-child(2) {
+    color: $sub-text-color;
+    font-size: $text-size-sm;
+  }
+  div last-child {
+    font-family: 'Sensibility Thin';
+  }
 }
 
-hr {
-  width: 75%;
+.row:last-child {
+  margin-bottom: 8rem;
+}
+
+.property {
+  cursor: pointer;
+  opacity: 0.65;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.property::after {
+  width: 60%;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  margin: 0 auto;
+  left: 20%;
+}
+
+.contract-signed {
+  color: #4cc485;
+}
+
+.contract-unsigned {
+  color: #FF000E;
 }
 
 .clearfix {

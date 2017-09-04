@@ -3,9 +3,10 @@
 
 footer {
   @include expandBackground(#f8f6f8);
-  font-size: 0.8rem;
+  font-size: $text-size-sm;
   color: $sub-text-color;
   padding-top: 2rem;
+  padding-bottom: 4rem;
   section {
     @include centerChildren();
     margin-bottom: 2rem;

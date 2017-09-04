@@ -8,10 +8,15 @@ import 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+const myStyle = require('./style.css');
 const images = {
   "city": require('./app/assets/images/city.jpg'),
   "cp"  : require('./app/assets/images/cp.jpg'),
-  "dummy": require('./app/assets/images/dummy.jpg')
+  "dummy1": require('./app/assets/images/dummy1.jpg'),
+  "dummy2": require('./app/assets/images/dummy2.jpg'),
+  "dummy3": require('./app/assets/images/dummy3.jpg'),
+  "dummy4": require('./app/assets/images/dummy4.jpg'),
+  "dummy5": require('./app/assets/images/dummy5.jpg')
 };
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';

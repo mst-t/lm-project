@@ -1,0 +1,42 @@
+<div *ngIf="isOpen" class="modal-background">
+  <div class="modal-tile slide-in-down">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Property Details</h4>
+          <button type="button" class="close" (click)="onClose()"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <img src="{{property.image}}">
+          <div class="body-row">
+            <div class="body-col">
+              <p><span>Address 1:</span> {{property.address1}}</p>
+              <p><span>Address 2:</span> {{property.address2}}</p>          
+              <p [ngClass]="property.signed? 'contract-signed' : 'contract-unsigned'">
+                <span>Contract:</span> {{property.signed? "Signed" : "Unsigned"}}
+              </p>
+              <p>
+                <span>Bed: </span>
+                <span *ngIf="property.studio">Studio</span>
+                <span *ngIf="!property.studio">{{property.rooms + " bed"}}{{property.rooms >= 2 ? "s" : ""}}</span>
+                </p>
+              <p><span>Bath:</span> {{property.baths + " bath"}}{{property.baths >= 2 ? "s" : ""}}</p>
+              <p><span>Price For Sale:</span> {{property.priceForSale | currency:'USD':true:'1.0-0'}}</p>
+              <p><span>Price Per SF:</span> {{property.pricePerSf | currency:'USD':true:'1.0-0'}}</p>
+              <p><span>Area:</span> {{property.area | uppercase}}<p>
+            </div>
+            <div class="body-col">
+              <p>
+                <span>Description:</span>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="onClose()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
