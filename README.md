@@ -1,6 +1,15 @@
 # A sample Angular Universal app
 A sample website using Angular Universal. Only `Home` and `Closed Tdansaction` sections work so far.
 
+## Last Updates
+* Completed "Transaction" view.
+* Implemented the sort feature.
+* Implemented modal for each property info.
+* Corrected font sizes and typos.
+* Corrected width sizes using css "overflow".
+* Added vendor prefixes using webpack(postcss-loader + autoprefixer)
+* Implemented css3 animations(The "Home" View and the modal)
+
 ## Done
 Languages
 * TypeScript

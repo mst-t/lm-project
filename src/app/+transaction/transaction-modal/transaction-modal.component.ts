@@ -8,7 +8,7 @@ import { Property } from './../Property';
 })
 export class TransactionModalComponent implements OnInit {
 
-  private isOpen:boolean = false;
+  private isOpen: boolean = false;
   private property: Property;
   
   constructor() {}

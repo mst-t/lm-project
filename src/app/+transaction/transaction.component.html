@@ -20,6 +20,7 @@
     <p>{{property.address1}}</p>
     <p *ngIf="!property.address2">{{property.area}}</p>
     <p [ngClass]="property.signed? 'contract-signed' : 'contract-unsigned'">
+      <i class="fa fa-pencil" aria-hidden="true"></i>
       {{property.signed? "Contract Signed" : "Contract Unsigned"}}
     </p>
   </div>
